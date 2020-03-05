@@ -1,12 +1,10 @@
-digraph foo {
-    rankdir="TB"
-    node [style=rounded, width=1, margin="0,0"];
+digraph pull {
+    size="40!"
     Repository [shape=cylinder, label="Central\nRepository" width=1];
     User1Rep [shape= cylinder, label="User1\nRepository", color=blue];
     Repository -> User1Rep [ label="pull" ]
     subgraph cluster_User1 {
         label="User1 Computer"
-        {  User1Rep
-        }
+        User1Rep
     }
 }

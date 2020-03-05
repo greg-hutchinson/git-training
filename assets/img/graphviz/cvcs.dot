@@ -1,11 +1,11 @@
-digraph foo {
-  node [style=rounded, width=1, margin="0,0"];
-  Repository [shape=cylinder, label="Central\nRepository" width=1];
-  User1 [shape= rectangle, label="User1\nWorking\nCopy",];
-  User2 [shape= rectangle, label="User2\nWorking\nCopy"];
+digraph cvcs {
+    size="40!"
+    Repository [shape=cylinder, label="Central\nRepository" width=1];
+    User1 [shape= rectangle, label="User1\nWorking\nCopy",];
+    User2 [shape= rectangle, label="User2\nWorking\nCopy"];
 
-  User1 -> Repository [label="commit", labeldistance=3]
-  Repository -> User1 [label="update", labeldistance=3]
-  User2 -> Repository [label="commit", labeldistance=3]
-  Repository -> User2 [label="update", labeldistance=3]
+    User1 -> Repository [label="commit"]
+    Repository -> User1 [label="check-out"]
+    User2 -> Repository [label="commit"]
+    Repository -> User2 [label="check-out"]
 }
