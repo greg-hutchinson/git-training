@@ -1,0 +1,7 @@
+digraph a {
+{rank=same Danielle Mike}
+    Danielle -> Mike [label="spouse"]
+    Danielle -> Owen [label="child"]
+    Danielle -> Marc [label="child"]
+    Danielle -> Mila [label="spouse"]
+}
