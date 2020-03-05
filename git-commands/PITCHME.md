@@ -1,8 +1,6 @@
-
-# Theory
----
 ## Centralized VCS - CVCS
 @img[midpoint span-70](assets/img/cvcs.png)
+
 ---
 ## DVCS  - Summary
 @img[midpoint span-55](assets/img/dvcs.png)
@@ -12,6 +10,9 @@
 - Remote Repository - The git repository that is hosted in the cloud or on another computer
 - Local Repository - The git repository that is hosted on your local computer
 - Working Copy - The current checked-out version to your local computer.
+
+---
+# Common Git Commands
 
 ---
 ## Clone
@@ -31,7 +32,7 @@
 ## Pull
 @img[south-east span-40](assets/img/pull.png)
 @snap[west text-08 span-50]
-### Pull all deltas from the **local repository** to the **remote repository**
+### Pull all deltas from the **remote repository** to the **local repository**
 @snapend
 
 ---
