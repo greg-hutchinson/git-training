@@ -16,3 +16,4 @@
 - Git (in theory) takes an extra step or two to have the most current snapshot (pull, checkout)
 
 ---?include=git-commands/PITCHME.md
+---?include=scenarios/PITCHME.md

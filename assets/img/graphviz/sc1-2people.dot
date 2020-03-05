@@ -13,7 +13,7 @@ digraph simple {
         node [shape=box]
         labelloc="b"
         labeljust="l";
-        label="c:\\repo"
+        label="User1  c:\\repo"
         fs1 [label="a.txt"];
         fs2 [label="a.txt\nb.txt"];
         fs1 -> fs2
@@ -23,17 +23,17 @@ digraph simple {
         node [shape=box]
         labeljust="l";
         labelloc="b"
-        label="d:\\repo"
+        label="User2  d:\\repo"
         fs01 [label="a.txt"];
         fs02 [label="a.txt\nc.txt"];
         fs01 -> fs02
         cs11 -> cs3
     }
-    subgraph cluster_server1 {
+    subgraph cluster_remote {
         node [shape=box]
         labeljust="l";
         labelloc="b"
-        label="\\cloud\\repo"
+        label="Remote  \\cloud\\repo"
         s01 [label="a.txt"];
         cs12
     }
