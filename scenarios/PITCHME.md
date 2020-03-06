@@ -7,11 +7,31 @@
 - User1 creates b.txt and commits
 - User2 creates c.txt and commits
 @snapend
+
 ---
-@img[east span-55](assets/img/sc1-step1.png)
+@img[east span-55](assets/img/sc1-step2.png)
 @snap[west text-06 span-40]
 - User1 pushes changes
-- User2's attempt to push changes will fail
-    - multiple heads
-- User2 must pull changes and merge
+- User2's attempt to push changes will fail because of multiple remote heads
+@snapend
+
+---
+@img[east span-60](assets/img/sc1-step3.png)
+@snap[west text-06 span-40]
+- User2 has pulled changes
+- This has created 2 heads (locally)
+@snapend
+
+---
+@img[east span-55](assets/img/sc1-step31.png)
+@snap[west text-06 span-40]
+- User2 has merged the 2 local heads into 1
+- This can now be pushed
+@snapend
+
+---
+@img[east span-55](assets/img/sc1-step4.png)
+@snap[west text-06 span-40]
+- User2 has pushed changes
+- When User1 pulls, her graph will look identical again
 @snapend

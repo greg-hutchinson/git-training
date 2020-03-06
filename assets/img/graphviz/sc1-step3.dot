@@ -3,12 +3,13 @@ digraph simple {
     size="20!"
     node [shape=circle, style=filled]
     u1Cs1 [label="1"]
+    u1Cs2  [label="2"]
+    u1fill1 [style=invisible]
     u2Cs1 [label="1"]
+    u2Cs2 [label="2"]
+    u2Cs3 [label="3"]
     r1Cs1 [label="1"]
     r1Cs2 [label="2"]
-    r1Cs3 [label="3", fillcolor="red"]
-    u1Cs2  [label="2"]
-    u2Cs3 [label="3"]
     node [shape=box, style=""]
     labelloc="b"
     labeljust="l";
@@ -27,6 +28,7 @@ digraph simple {
         u2Fs2 [label="a.txt\nc.txt"];
         u2Fs1 -> u2Fs2
         u2Cs1 -> u2Cs3
+        u2Cs1 -> u2Cs2
     }
 
     subgraph cluster_remote {
@@ -35,9 +37,8 @@ digraph simple {
         r1Fs2 [label="a.txt\nb.txt"];
         r1Fs1 -> r1Fs2
         r1Cs1 -> r1Cs2
-        r1Cs1 -> r1Cs3 [style=dotted]
     }
 
-    u1Cs2  -> r1Cs1 [style=invis]
-    u2Cs3 -> r1Cs1 [style=invis]
+    u1fill1  -> r1Cs1 [style=invis]
+    u2Cs2 -> r1Cs1 [style=invis]
 }
