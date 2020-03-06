@@ -1,17 +1,3 @@
-## Centralized VCS - CVCS
-@img[midpoint span-70](assets/img/cvcs.png)
-
----
-## DVCS  - Summary
-@img[midpoint span-55](assets/img/dvcs.png)
-
----
-## Terminology
-- Remote Repository - The git repository that is hosted in the cloud or on another computer
-- Local Repository - The git repository that is hosted on your local computer
-- Working Copy - The current checked-out version to your local computer.
-
----
 # Common Git Commands
 
 ---
