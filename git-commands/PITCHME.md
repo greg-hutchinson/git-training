@@ -9,15 +9,15 @@
 
 ---
 ## Push
-@img[south-east span-40](assets/img/push.png)
-@snap[west text-08 span-50]
+@img[south-east span-35](assets/img/push.png)
+@snap[west text-08 span-60]
 ### Push all deltas from the **local repository** to the **remote repository**
 @snapend
 
 ---
 ## Pull
-@img[south-east span-40](assets/img/pull.png)
-@snap[west text-08 span-50]
+@img[south-east span-35](assets/img/pull.png)
+@snap[west text-08 span-60]
 ### Pull all deltas from the **remote repository** to the **local repository**
 @snapend
 
