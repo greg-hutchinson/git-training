@@ -17,3 +17,7 @@
 - The toolbar
 - The Local branch and the remote branch
 - Resetting (the local branch) to a point in time
+
+---
+## Now let's put it to use.
+[Exercises](https://github.com/greg-hutchinson/git-training/wiki/Home)
