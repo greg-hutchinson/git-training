@@ -1,0 +1,26 @@
+digraph dvcs {
+    size="40!"
+    rankdir="BT"
+    Repository [shape=cylinder, label="Central\nRepository" width=1 color=red];
+    User1WC [shape= square, label="User1\nWorking\nCopy", style=filled; color=yellow];
+    User2WC [shape= square, label="User2\nWorking\nCopy",style=filled; color=yellow]
+    User1Rep [shape= cylinder, label="User1\nRepository", color=blue];
+    User2Rep [shape= cylinder, label="User2\nRepository",color=blue];
+    User1Rep -> Repository [label="push"]
+    Repository -> User1Rep [label="pull"]
+    User2Rep -> Repository [label="push"]
+    Repository -> User2Rep [label="pull"]
+    User1WC -> User1Rep [label="commit"]
+    User1Rep -> User1WC [label="check-out"]
+    User2WC -> User2Rep [label="commit"]
+    User2Rep -> User2WC [label="check-out"]
+
+    subgraph cluster_User1 {
+        label="User1 Computer"
+        User1Rep User1WC
+    }
+    subgraph cluster_User2 {
+        label="User2 Computer"
+        User2Rep User2WC
+    }
+}

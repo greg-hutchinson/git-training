@@ -1,0 +1,12 @@
+digraph clone {
+    size="40!"
+    node [style=rounded, shape=cylinder, width=1, margin="0,0"];
+    Repository [label="Central\nRepository" width=1];
+    User1Rep [label="User1\nRepository", color=blue];
+    Repository -> User1Rep [style="dashed", label="clone" ]
+    subgraph cluster_User1 {
+        labelloc="b"
+        label="User1 Computer"
+        User1Rep
+    }
+}

@@ -1,0 +1,11 @@
+digraph commit {
+    rankdir="BT"
+    size="40!"
+    User1WC [shape= square, label="User1\nWorking\nCopy", style=filled; color=yellow];
+    User1Rep [shape= cylinder, label="User1\nRepository", color=blue];
+    User1WC -> User1Rep [label="commit"]
+    subgraph cluster_User1 {
+        label="User1 Computer"
+        User1Rep User1WC
+    }
+}
