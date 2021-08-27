@@ -1,5 +1,0 @@
-digraph greg {
-    greg->alex
-    greg->steph
-    alex->steph
-}
