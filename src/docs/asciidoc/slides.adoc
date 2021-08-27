@@ -1,12 +1,17 @@
 = Git
 ifndef::imagesdir[:imagesdir: images]
 ifndef::sourcedir[:sourcedir: ../../main/java]
+:revealjs_theme: solarized
+:author: Greg Hutchinson
 :url-wolpertinger: https://en.wikipedia.org/wiki/Wolpertinger
 :checkedbox: pass:normal[{startsb}&#10004;{endsb}]
 :title-slide-transition: zoom
 :tip-caption: 💡
 
-Distributed Version Control System
+
++++<small>+++
+**D**istributed Version Control System
++++</small>+++
 
 ## Git Vs. Sharepoint
 - Both are centralized locations for source documents
@@ -17,9 +22,6 @@ Distributed Version Control System
 - Git works locally and is really fast. Sharepoint is a little sluggish
 - Git (in theory) takes an extra step or two to have the most current snapshot (pull, checkout)
 - Git is more technical, steeper learning curve but because of this has a lot more features
-
-
-
 
 [.columns]
 ## Centralized VCS - CVCS
@@ -55,10 +57,8 @@ digraph cvcs {
 - All history is on the local computer
 
 
-[.columns]
 ## DVCS 
-[.column.is-two-thirds]
-[graphviz, dvcs1, png]
+[graphviz, dvcs1, png, width=800, height=500]
 ----
 digraph dvcs {
     rankdir="BT"
@@ -88,8 +88,6 @@ digraph dvcs {
     }
 }
 ----
-[.column]
-Let's discuss this in detail
 
 ## Terminology
 - Remote Repository - The git repository that is hosted in the cloud or on another computer
@@ -103,182 +101,64 @@ Let's discuss this in detail
 - Commit - Commit the changes in the **working copy** to the **local repository**
 - Check-out - Replicated the **working copy** with an exact snapshot of this point in time from the **local repository**
 
-== b
-.lets see
-[graphviz, dvcs2, png]
+
+[.columns]
+## Scenario1 
+[.column]
+[graphviz, sc1-step1, png, width=700, height=500]
 ----
-
-digraph dvcs2 {
-    rankdir="BT"
-include::topics/cluster1.gv[]
-    User2Rep -> u1Fs1
-}
+include::topics/sc1-step1.gv[]
 ----
+[.column]
+- User1 has cloned remote
+- User2 has cloned remote
+- User1 creates b.txt and commits
+- User2 creates c.txt and commits
 
-== a
-include::topics/git-kraken.adoc[]
-== B
-include::topics/scenarios.adoc[]
-
-
-
-
-[%step]
-* This is a user manual for an example project.
-* This project does something.
-* We just haven't decided what that is yet.
-
-== Speaker Notes
-
-Press the `*s*` key to access speaker notes.
-
-[NOTE.speaker]
---
-You've unlocked the super secret notes area.
-Neat huh?
---
-== Diagrams
-
-[ditaa,asciidoctor-diagram-process]
-....
-                   +-------------+
-                   | Asciidoctor |-------+
-                   |   diagram   |       |
-                   +-------------+       | PNG out
-                       ^                 |
-                       | ditaa in        |
-                       |                 v
- +--------+   +--------+----+    /---------------\
- |        |---+ Asciidoctor +--->|               |
- |  Text  |   +-------------+    |   Beautiful   |
- |Document|   |   !magic!   |    |    Output     |
- |     {d}|   |             |    |               |
- +---+----+   +-------------+    \---------------/
-     :                                   ^
-     |          Lots of work             |
-     +-----------------------------------+
-....
-== Source Code
-
-[source,java]
-.Java code from project
+[.columns]
+## Next 
+[.column]
+[graphviz, sc1-step2, png, width=700, height=500]
 ----
-include::{sourcedir}/example/StringUtils.java[tags=contains,indent=0]
+include::topics/sc1-step2.gv[]
 ----
+[.column]
+- User1 pushes changes
+- User2's attempt to push changes will fail because of multiple remote heads
 
-This page was built by the following command:
-
- $ mvn
-
-== Blank screen
-
-You can press `*b*` or `*.*` to blank your current screen.
-
-Hit it again to bring it back.
-
-== Overview
-
-Press the `*esc*` key to get an overview of your slides.
-
-
-== Images
-
-[.thumb]
-image::sunset.jpg[scaledwidth=25%]
-
-== Graphviz
-[graphviz, dot-example, svg]
+[.columns]
+## Next 
+[.column]
+[graphviz, sc1-step3, png, width=800, height=500]
 ----
-digraph g {
-    a -> b
-    b -> c
-    c -> d
-    d -> a
-}
+include::topics/sc1-step3.gv[]
 ----
-== Images as background
+[.column]
+- User2 has pulled changes
+- This has created 2 heads (locally)
 
-image::sunset.jpg[background, size=cover]
-
-Try setting an animated GIF.
-
-== Images as background
-
-image::girl.gif[background, size=50%]
-
-Try setting an animated GIF.
-
-== Attributes
-
-Press the down arrow key to see the next sub-slide.
-
-=== Attributes Part 1
-.Built-in
-asciidoctor-version:: {asciidoctor-version}
-safe-mode-name:: {safe-mode-name}
-docdir:: {docdir}
-docfile:: {docfile}
-imagesdir:: {imagesdir}
-
-=== Attributes Part 2
-.Custom
-project-version:: {project-version}
-sourcedir:: {sourcedir}
-
-
-
-=== Whatever
-## More Stuff
-
-[source]
---
-puts "I'm a source block!"
---
-
-## ASdfas
-
-[source,ruby]
+[.columns]
+## Next 
+[.column]
+[graphviz, sc1-step31, png, width=700, height=500]
 ----
-require 'sinatra' <1>
-
-get '/hi' do <2> <3>
-  "Hello World!"
-end
+include::topics/sc1-step31.gv[]
 ----
-<1> Library import
-<2> URL mapping
-<3> Response block
+[.column]
+- User2 has merged the 2 local heads into 1
+- This can now be pushed
 
 
-.After landing the cloaked Klingon bird of prey in Golden Gate park:
-[quote, Captain James T. Kirk, Star Trek IV: The Voyage Home]
-Everybody remember where we parked.
+[.columns]
+## Next 
+[.column]
+[graphviz, sc1-step4, png, width=700, height=500]
+----
+include::topics/sc1-step4.gv[]
+----
+[.column]
+- User2 has pushed changes
+- When User1 pulls, her graph will look identical again
 
-{checkedbox} That's done!
-
-
-[TIP]
-It's possible to use Unicode glyphs as admonition icons.
-
-## New Stuff
-[sidebar]
-Sidebars are used to visually separate auxiliary bits of content
-that supplement the main text.
-
-
-
-## More Stuff ag
-.Onomatopoeia
-====
-The book hit the floor with a *thud*.
-
-He could hear doves *cooing* in the pine trees`' branches.
-====
-
-.Adafdssdf
-====
-sfsdafsdfsa afsdasdf
-
-====
 
 

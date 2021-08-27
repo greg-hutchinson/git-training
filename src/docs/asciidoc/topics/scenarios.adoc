@@ -4,7 +4,7 @@
 [.column.is-two-thirds]
 [graphviz, scenario1, png]
 ----
-include::sc1-step1.adoc
+include::topics/sc1-step1.adoc
 ----
 
 ## Next
