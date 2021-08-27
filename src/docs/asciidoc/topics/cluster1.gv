@@ -1,0 +1,7 @@
+    subgraph cluster_user1 {
+        label="User1  c:\\repo"
+        u1Fs1 [label="a.txt"];
+        u1Fs2 [label="a.txt\nb.txt"];
+        u1Fs1 -> u1Fs2
+        u1Cs1 -> u1Cs2
+    }

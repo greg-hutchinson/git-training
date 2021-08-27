@@ -1,12 +1,19 @@
+
+[.columns]
 ## Scenarios
----
-@img[east span-55](assets/img/sc1-step1.png)
-@snap[west text-06 span-40]
+[.column.is-two-thirds]
+[graphviz, scenario1, png]
+----
+include::sc1-step1.adoc
+----
+
+## Next
+[.column]
 - User1 has cloned remote
 - User2 has cloned remote
 - User1 creates b.txt and commits
 - User2 creates c.txt and commits
-@snapend
+
 
 ---
 @img[east span-55](assets/img/sc1-step2.png)
