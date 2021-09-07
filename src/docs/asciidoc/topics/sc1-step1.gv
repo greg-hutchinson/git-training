@@ -1,4 +1,5 @@
 digraph sc1step1 {
+    
     rankdir="BT"
     size="20!"
     node [shape=circle, style=filled]
