@@ -1,0 +1,3 @@
+This is the file b.txt with one line of text.
+
+These are very important changes - they came from Greg.!!!
