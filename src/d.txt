@@ -1,0 +1,3 @@
+This is the file d.txt with one line of text.
+
+with all of Tanya's useless changes
